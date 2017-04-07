@@ -21,11 +21,13 @@ var pizzaSize = {
 
 Pizza.prototype.subtotal = function (size, toppins) {
   var subtotal = size + toppings;
+  this.cost = subtotal;
   return subtotal;
 };
 
 Order.prototype.orderPrice = function (array) {
   var price = array.reduce((a, b) => a + b, 0);
+  this.totalCost = price;
   return price;
 };
 

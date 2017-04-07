@@ -1,3 +1,30 @@
 /** {
   border: 1px solid black;
 }*/
+
+body {
+  text-align: center;
+}
+
+.pizza-style {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid black;
+}
+
+.toppings, .pizzas {
+  width: 40%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.toppings div {
+  padding-left: 8%;
+}
