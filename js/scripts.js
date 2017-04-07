@@ -4,11 +4,11 @@ function Order() {
   this.totalCost;
 }
 
-function Pizza() {
-  this.size;
-  this.crust;
-  this.suace;
-  this.toppings = [];
+function Pizza(size, crust, sauce, toppings) {
+  this.size = size;
+  this.crust = crust;
+  this.suace = sauce;
+  this.toppings = toppings;
   this.cost;
 }
 
@@ -31,9 +31,33 @@ Order.prototype.orderPrice = function (array) {
   return price;
 };
 
+var getToppins = function (input) {
+  var toppings = []
+  $.each(input, function(){
+      toppings.push($(this).val());
+  });
+  return toppings;
+};
+
 //UI Logic
 $(function(){
+  $("#create-pizza").click(function(){
+    var newOrder = new Order();
 
+    $(".order").show();
+    $("#create-pizza").hide();
 
+    $("#add-pizza").click(function() {
+      var newSize = $("select[name=size] option:selected").val();
+      var newCrust = $("select[name=crust] option:selected").val();
+      var newSauce = $("select[name=sauce] option:selected").val();
+      var newTopping = $("input[name=toppings]:checked");
+      var newToppings = getToppins(newTopping);
+      var newPizza = new Pizza(newSize, newCrust, newSauce, newToppings);
 
+      console.log(newOrder);
+      console.log(newPizza);
+    });
+
+  });
 });

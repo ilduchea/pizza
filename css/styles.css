@@ -7,6 +7,10 @@ body {
   background-color: #FCF0CC;
 }
 
+.order {
+  display: none;
+}
+
 .jumbotron {
   color: #FCF0CC;
   background-color: #772014;
@@ -32,5 +36,5 @@ body {
 }
 
 .toppings div {
-  padding-left: 8%;
+  padding-left: 7%;
 }

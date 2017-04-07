@@ -15,74 +15,78 @@
         <h1>Red's Pizza</h1>
       </div>
       <form class="main" action="index.html" method="post">
-        <h2>Create Your Pizza</h2>
-        <div class="pizza-style">
-          <label for="size">Size:</label>
-          <select name="size">
-            <option value="Small">Small</option>
-            <option value="Medium">Medium</option>
-            <option value="Large">Large</option>
-            <option value="Extra-Large">Extra-Large</option>
-          </select>
-          <label for="crust">Crust:</label>
-          <select name="crust">
-            <option value="Thin">Thin</option>
-            <option value="Hand-Tossed">Hand Tossed</option>
-            <option value="Deep-Dish">Deep Dish</option>
-          </select>
-          <label for="sauce">Sauce:</label>
-          <select name="sauce">
-            <option value="Regular">Regular</option>
-            <option value="Light">Light</option>
-            <option value="Extra">Extra</option>
-          </select>
-        </div>
-        <div class="toppings row">
-          <div class="col-sm-4">
-            <h3>Meat</h3>
-            <input type="checkbox" name="toppings" value="Peperoni">
-            <span>Peperoni</span><br>
-            <input type="checkbox" name="toppings" value="Sausage">
-            <span>Sausage</span><br>
-            <input type="checkbox" name="toppings" value="Bacon">
-            <span>Bacon</span><br>
-            <input type="checkbox" name="toppings" value="Ham">
-            <span>Ham</span><br>
-            <input type="checkbox" name="toppings" value="Ground Beef">
-            <span>Ground Beef</span><br>
-            <input type="checkbox" name="toppings" value="Chicken">
-            <span>Chicken</span><br>
-            <input type="checkbox" name="toppings" value="Anchovies">
-            <span>Anchovies</span>
+        <button id="create-pizza" class="btn btn-lg" type="button" name="create">Create Your Pizza</button>
+        <div class="order">
+          <div class="pizza-style">
+            <label for="size">Size:</label>
+            <select name="size">
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+              <option value="Extra-Large">Extra-Large</option>
+            </select>
+            <label for="crust">Crust:</label>
+            <select name="crust">
+              <option value="Thin">Thin</option>
+              <option value="Hand-Tossed">Hand Tossed</option>
+              <option value="Deep-Dish">Deep Dish</option>
+            </select>
+            <label for="sauce">Sauce:</label>
+            <select name="sauce">
+              <option value="Regular">Regular</option>
+              <option value="Light">Light</option>
+              <option value="Extra">Extra</option>
+            </select>
           </div>
-          <div class="col-sm-4">
-            <h3>Veggies</h3>
-            <input type="checkbox" name="toppings" value="Mushrooms">
-            <span>Mushrooms</span><br>
-            <input type="checkbox" name="toppings" value="Black Olives">
-            <span>Black Olives</span><br>
-            <input type="checkbox" name="toppings" value="Pineapple">
-            <span>Pineapple</span><br>
-            <input type="checkbox" name="toppings" value="Onions">
-            <span>Onions</span><br>
-            <input type="checkbox" name="toppings" value="Peppers">
-            <span>Peppers</span><br>
-            <input type="checkbox" name="toppings" value="Tomatoes">
-            <span>Tomatoes</span><br>
+          <div class="toppings row">
+            <div class="col-sm-4">
+              <h3>Meat</h3>
+              <input type="checkbox" name="toppings" value="Peperoni">
+              <span>Peperoni</span><br>
+              <input type="checkbox" name="toppings" value="Sausage">
+              <span>Sausage</span><br>
+              <input type="checkbox" name="toppings" value="Bacon">
+              <span>Bacon</span><br>
+              <input type="checkbox" name="toppings" value="Ham">
+              <span>Ham</span><br>
+              <input type="checkbox" name="toppings" value="Ground Beef">
+              <span>Ground Beef</span><br>
+              <input type="checkbox" name="toppings" value="Chicken">
+              <span>Chicken</span><br>
+              <input type="checkbox" name="toppings" value="Anchovies">
+              <span>Anchovies</span>
+            </div>
+            <div class="col-sm-4">
+              <h3>Veggies</h3>
+              <input type="checkbox" name="toppings" value="Mushrooms">
+              <span>Mushrooms</span><br>
+              <input type="checkbox" name="toppings" value="Black Olives">
+              <span>Black Olives</span><br>
+              <input type="checkbox" name="toppings" value="Pineapple">
+              <span>Pineapple</span><br>
+              <input type="checkbox" name="toppings" value="Onions">
+              <span>Onions</span><br>
+              <input type="checkbox" name="toppings" value="Peppers">
+              <span>Peppers</span><br>
+              <input type="checkbox" name="toppings" value="Tomatoes">
+              <span>Tomatoes</span><br>
+            </div>
+            <div class="col-sm-4">
+              <h3>Other</h3>
+              <input type="checkbox" name="toppings" value="Extra-Cheese">
+              <span>Extra Cheese</span><br>
+              <input type="checkbox" name="toppings" value="Garlic">
+              <span>Garlic</span><br>
+              <input type="checkbox" name="toppings" value="Parsley">
+              <span>Parsley</span>
+            </div>
           </div>
-          <div class="col-sm-4">
-            <h3>Spices</h3>
-            <input type="checkbox" name="toppings" value="Garlic">
-            <span>Garlic</span><br>
-            <input type="checkbox" name="toppings" value="Parsley">
-            <span>Parsley</span>
-          </div>
-        </div>
-        <button class="btn btn-primary" type="button" name="add">Add Pizza</button>
-        <div class="pizzas">
+          <button id="add-pizza" class="btn btn-primary" type="button" name="add">Add Pizza</button>
+          <div class="pizzas">
 
+          </div>
+          <button class="btn btn-success btn-lg" type="submit" name="order">Order</button>
         </div>
-        <button class="btn btn-success btn-lg" type="submit" name="order">Order</button>
       </form>
     </div>
   </body>
