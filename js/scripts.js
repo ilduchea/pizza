@@ -25,13 +25,16 @@ Pizza.prototype.subtotal = function () {
   var toppings = parseFloat((this.toppings.length - 2) * 0.5);
   var subtotal = size + toppings;
   this.cost = subtotal;
-  newOrder.totalCost.push(subtotal);
   return subtotal;
 };
 
-Order.prototype.orderPrice = function (array) {
-  var price = array.reduce((a, b) => a + b, 0);
-  this.totalCost = price;
+
+
+Order.prototype.orderPrice = function () {
+  var price = 0;
+  this.totalCost.forEach(function(item) {
+    price += item;
+  });
   return price;
 };
 
@@ -69,6 +72,7 @@ $(function(){
 
       newOrder.pizza.push(newPizza);
       var pizzaPrice = newOrder.pizza[index].subtotal();
+      newOrder.totalCost.push(pizzaPrice);
 
 
       $(".pizzas").append(`<div class="pizza${classIndex}">` +
@@ -91,9 +95,10 @@ $(function(){
       newOrder.pizza[index].toppings.forEach(function(item) {
         $(`.pizza${classIndex} ul`).append(`<li>${item}</li>`);
       });
-
-
       index++;
+
+      // $("#total").text(newOrder.totalCost.reduce(getSum()));
+      $("#total span").text(newOrder.orderPrice());
     });
 
   });
