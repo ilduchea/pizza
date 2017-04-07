@@ -55,6 +55,8 @@ $(function(){
       var newToppings = getToppins(newTopping);
       var newPizza = new Pizza(newSize, newCrust, newSauce, newToppings);
 
+      newOrder.pizza.push(newPizza);
+      
       console.log(newOrder);
       console.log(newPizza);
     });
