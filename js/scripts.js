@@ -43,6 +43,7 @@ var getToppins = function (input) {
 $(function(){
   $("#create-pizza").click(function(){
     var newOrder = new Order();
+    var index = 1;
 
     $(".order").show();
     $("#create-pizza").hide();
@@ -56,7 +57,14 @@ $(function(){
       var newPizza = new Pizza(newSize, newCrust, newSauce, newToppings);
 
       newOrder.pizza.push(newPizza);
-      
+
+      $(".pizzas").append(`<div class="pizza${index}">` +
+                            `<h3>pizza${index}</h3>` +
+                          `</div>`
+      );
+
+      index++;
+
       console.log(newOrder);
       console.log(newPizza);
     });
