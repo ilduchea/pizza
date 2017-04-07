@@ -4,6 +4,12 @@
 
 body {
   text-align: center;
+  background-color: #FCF0CC;
+}
+
+.jumbotron {
+  color: #FCF0CC;
+  background-color: #772014;
 }
 
 .pizza-style {
