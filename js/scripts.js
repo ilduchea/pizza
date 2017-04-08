@@ -25,7 +25,7 @@ Pizza.prototype.subtotal = function () {
   var toppings = parseFloat((this.toppings.length - 2) * 0.5);
   var subtotal = size + toppings;
   this.cost = subtotal;
-  return subtotal;
+  return subtotal.toFixed(2);
 };
 
 
@@ -33,16 +33,16 @@ Pizza.prototype.subtotal = function () {
 Order.prototype.orderPrice = function () {
   var price = 0;
   this.totalCost.forEach(function(item) {
-    price += item;
+    price += parseFloat(item);
   });
-  return price;
+  return price.toFixed(2);
 };
 
 // Pizza.prototype.listItems = function (selector) {
-//   for (var j = 0; j < this.length; j++) {
+//   for (var j = 0; j < this.length - 2; j++) {
 //     selector.append(`<li>${this[j]}</li>`);
 //   };
-// };
+// }; not working as expected
 
 var getToppins = function (input) {
   var toppings = []
@@ -92,12 +92,12 @@ $(function(){
       $(`.pizza${classIndex} ul`).append(`<li>${newOrder.pizza[index].size}</li>`);
       $(`.pizza${classIndex} ul`).append(`<li>${newOrder.pizza[index].crust}</li>`);
       $(`.pizza${classIndex} ul`).append(`<li>${newOrder.pizza[index].sauce}</li>`);
+      // newOrder.pizza[index].listItems($(`.pizza${classIndex} ul`)); not working
       newOrder.pizza[index].toppings.forEach(function(item) {
         $(`.pizza${classIndex} ul`).append(`<li>${item}</li>`);
       });
       index++;
 
-      // $("#total").text(newOrder.totalCost.reduce(getSum()));
       $("#total span").text(newOrder.orderPrice());
     });
 
