@@ -98,6 +98,7 @@ $(function(){
       });
       index++;
 
+      $("#total").show()
       $("#total span").text(newOrder.orderPrice());
     });
 
