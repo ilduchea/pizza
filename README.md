@@ -40,7 +40,7 @@ A site for a pizza restaurant, with online ordering.
 ## Setup/Installation Requirements
 
 * _You can use the following link to open the site in your current browser:_
-* _ _
+* https://ilduchea.github.io/pizza/ 
 * _or_
 * _You can clone the GitHub repository._
 * _Open the index.html file found with in the Ping-Pong directory/folder in your browser._

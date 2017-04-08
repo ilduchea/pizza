@@ -88,6 +88,10 @@ $(function(){
                           `</div>`
       );
 
+      // $(`.pizza${classIndex} h3`).last().click(function(){
+      //   $(`.pizza${classIndex} ul`).toggleClass("hide");
+      // });
+
       //Needs refactoring. clunky.
       $(`.pizza${classIndex} ul`).append(`<li>${newOrder.pizza[index].size}</li>`);
       $(`.pizza${classIndex} ul`).append(`<li>${newOrder.pizza[index].crust}</li>`);

@@ -9,7 +9,7 @@ body {
 
 .order,
 #total,
-.pizzas ul {
+.hide {
   display: none;
 }
 
@@ -39,4 +39,8 @@ body {
 
 .toppings div {
   padding-left: 7%;
+}
+
+.show {
+  display: inline-block;
 }
